@@ -5,7 +5,7 @@ using namespace std;
 int main() {
      char num;
 
-    //MENGGANTI INT DENGAN CHAR LALU MENAMBAHKAN TANDA PETIK SATU (') PADA CASE
+    //MENGGANTI INT DENGAN CHAR
 
     cout << "Enter a number: ";
     cin >> num;
@@ -23,6 +23,8 @@ int main() {
     default:
         cout << "Other number" << endl;
         break;
+
+         //MENAMBAHKAN TANDA PETIK SATU (') PADA CASE
     }
 
     return 0;
