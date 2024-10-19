@@ -10,7 +10,7 @@ int main() {
     cout << "Enter second number: ";
     cin >> b;
 
-    //MEMISAHKAN INPUT NOMOR YANG KEDUA 1 DENGAN NOMOR YANG KEDUA
+    //MEMISAHKAN INPUT NOMOR YAMG PERTAMA DENGAN NOMOR YANG KEDUA
 
     if(a > b)
         cout << "a is greater than b" << endl;
