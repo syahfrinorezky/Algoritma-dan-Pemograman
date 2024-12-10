@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+int quizPerkalian(int num1, int num2) {
+    return num1 * num2;
+}
+
+int quizMax(int num1, int num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+void menuSection(int& choose) {
+    cout << "====== MENU ======" << endl;
+    cout << "MENU INI BERURUTAN, JADI PILIH DARI NOMOR 1 TERUS UTN"
+    cout << "1. PERKALIAN" << endl;
+    cout << "2. NILAI TERBESAR" << endl;
+    cout << "3. GANJIL GENAP" << endl;
+    cout << "MASUKKAN PILIHAN : ";
+    cin >> choose;
+}
+
+int main() {
+    int choose;
+    int num1 = 0, num2 = 0;
+
+    while (true) {
+        menuSection(choose);
+
+        switch (choose) {
+            case 1: {
+                cout << "MASUKKAN ANGKA PERTAMA : ";
+                cin >> num1;
+                cout << "MASUKKAN ANGKA KEDUA : ";
+                cin >> num2;
+
+                int multiple = quizPerkalian(num1, num2);
+                cout << "THE RESULT OF MULTIPLE : " << multiple << endl;
+                break;
+            }
+
+            case 2: {
+                if (num1 == 0 && num2 == 0) {
+                    cout << "BELUM ADA NILAI YANG DIINPUTKAN! PILIH PERKALIAN TERLEBIH DAHULU." << endl;
+                } else {
+                    int angkaMax = quizMax(num1, num2);
+                    cout << "NILAI TERBESAR ANTARA KEDUA ANGKA : " << angkaMax << endl;
+                }
+                break;
+            }
+
+            case 3: {
+                cout << "FITUR GANJIL GENAP BELUM TERSEDIA." << endl;
+                break;
+            }
+
+            default: {
+                cout << "PILIHAN TIDAK TERSEDIA" << endl;
+                break;
+            }
+        }
+
+        cout << "INGIN MELANJUTKAN? (1 = YA, 0 = TIDAK): ";
+
+        int lanjut;
+        cin >> lanjut;
+        if (lanjut == 0) {
+            break;
+        }
+    }
+
+    return 0;
+}
